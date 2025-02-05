@@ -18,10 +18,10 @@ const Step1 = ({ handleNextStep }) => {
                     </div>
                     <div className='pt-[40px]'>
                         <label className='text-2xl font-medium leading-[30px] text-secondary-50' htmlFor="money">How much money are you looking for?</label> <br/>
-                        <input className='w-full md:w-[400px] py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[17px] outline-primary mb-1' type='text' {...register("money", { required: true })}
+                        <input className='w-full md:w-[400px] py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[17px] outline-primary mb-1' type='text' {...register("money", { required: "How much money Field is Required" })}
                             placeholder='$2,500' /> <br/>
                         {errors?.money && (
-                            <span className='text-sm text-red-500'>This field is required</span>
+                            <span className='text-sm text-red-500'>{errors.money.message}</span>
                         )}
                     </div>
                     {/* button  */}

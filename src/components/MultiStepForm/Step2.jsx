@@ -14,7 +14,7 @@ const Step2 = ({handleNextStep, handlePreviousStep}) => {
           <div className='pt-[40px]'>
             <label className='text-2xl font-medium leading-[24px] text-secondary-50' htmlFor="month">Business Start Month</label> <br />
             <select
-              {...register("month", { required: true })}
+              {...register("month", { required: "Business Start Month is Required" })}
               className="w-full py-[12px] pl-[16px] pr-[19px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[17px] outline-primary text-primary mb-1"
             >
               <option className='text-base font-normal text-secondary-100/50 leading-[36px]' value="">Select Month</option>
@@ -25,12 +25,12 @@ const Step2 = ({handleNextStep, handlePreviousStep}) => {
                 <option className='text-base font-normal text-primary leading-[36px]' key={index} value={month}>{month}</option>
               ))}
             </select>
-            {errors?.month && <p className="text-sm text-red-500">This field is required</p>}
+            {errors?.month && <p className="text-sm text-red-500">{errors.month.message}</p>}
           </div>
           <div className='pt-[40px]'>
             <label className='text-2xl font-medium leading-[24px] text-secondary-50' htmlFor="lastYear">Last Year</label> <br />
             <select
-              {...register("lastYear", { required: true })}
+              {...register("lastYear", { required: "Last Year is Required" })}
               className="w-full py-[12px] pl-[16px] pr-[19px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[17px] outline-primary text-primary mb-1"
             >
               <option className='text-base font-normal text-secondary-100/50 leading-[36px]' value="">Select Year</option>
@@ -38,7 +38,7 @@ const Step2 = ({handleNextStep, handlePreviousStep}) => {
                 <option className='text-base font-normal text-primary leading-[36px]' key={year} value={year}>{year}</option>
               ))}
             </select>
-            {errors?.lastYear && <p className="text-sm text-red-500">This field is required</p>}
+            {errors?.lastYear && <p className="text-sm text-red-500">{errors.lastYear.message}</p>}
           </div>
           {/* button  */}
           <div className='flex items-center justify-between pt-[61px]'>

@@ -10,10 +10,10 @@ const Step7 = ({ handleNextStep }) => {
 
                     <div className='pt-[40px]'>
                         <label className='text-2xl font-medium leading-[24px] text-secondary-50' htmlFor="business">What is legal name of your business?</label> <br />
-                        <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[17px] outline-primary mb-1' type='text' {...register("business", { required: true })}
+                        <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[17px] outline-primary mb-1' type='text' {...register("business", { required: "Business name is Required" })}
                             placeholder='Enter business name' /> <br />
                         {errors?.business && (
-                            <span className='text-sm text-red-500'>This field is required</span>
+                            <span className='text-sm text-red-500'>{errors.business.message}</span>
                         )}
                     </div>
                     {/* button  */}

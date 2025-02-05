@@ -17,7 +17,7 @@ const Step4 = ({ handleNextStep, handlePreviousStep }) => {
                                 <input
                                     type="radio"
                                     value="yes"
-                                    {...register("payment", { required: true })}
+                                    {...register("payment", { required: "Credit cards as form of payment is Required" })}
                                     className="w-5 h-5 accent-primary mb-1"
                                 />
                                 Yes
@@ -28,14 +28,14 @@ const Step4 = ({ handleNextStep, handlePreviousStep }) => {
                                 <input
                                     type="radio"
                                     value="no"
-                                    {...register("payment", { required: true })}
+                                    {...register("payment", { required: "Credit cards as form of payment is Required" })}
                                     className="w-5 h-5 accent-primary mb-1"
                                 />
                                 No
                             </label>
                         </div>
                         {errors?.payment && (
-                            <span className='text-sm text-red-500'>This field is required</span>
+                            <p className='text-sm text-red-500 text-center'>{errors.payment.message}</p>
                         )}
                     </div>
                     {/* button  */}

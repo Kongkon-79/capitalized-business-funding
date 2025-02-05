@@ -45,7 +45,7 @@ const Step5 = ({ handleNextStep, handlePreviousStep }) => {
                     <div className='pt-[40px]'>
                         <label className='text-2xl font-medium leading-[30px] text-secondary-100' htmlFor="score">What is your estimated credit score?</label> <br />
                         <select
-                            {...register("score", { required: true })}
+                            {...register("score", { required: "Credit score is Required" })}
                             className="w-full py-[12px] pl-[16px] pr-[19px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[17px] outline-primary mb-1"
                         >
                             <option className='text-base font-normal text-secondary-100/50 leading-[36px]' value="" disabled selected>
@@ -58,7 +58,7 @@ const Step5 = ({ handleNextStep, handlePreviousStep }) => {
                             ))}
                         </select>
                         {errors?.score && (
-                            <span className='text-sm text-red-500'>This field is required</span>
+                            <span className='text-sm text-red-500'>{errors.score.message}</span>
                         )}
                     </div>
                     {/* button  */}
