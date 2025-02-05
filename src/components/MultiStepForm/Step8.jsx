@@ -10,18 +10,18 @@ const Step8 = ({ handleNextStep }) => {
 
                     <div>
                         <label className='text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="firstName">First Name</label> <br />
-                        <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[16px] outline-primary mb-1' type='text' {...register("firstName", { required: true })}
+                        <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[16px] outline-primary mb-1' type='text' {...register("firstName", { required: "First Name is Required" })}
                             placeholder='Enter first name' /> <br />
                         {errors?.firstName && (
-                            <span className='text-sm text-red-500'>This field is required</span>
+                            <span className='text-sm text-red-500'>{errors.firstName.message}</span>
                         )}
                     </div>
                     <div className='pt-[40px]'>
                         <label className='text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="lastName">Last Name</label> <br />
-                        <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[16px] outline-primary mb-1' type='text' {...register("lastName", { required: true })}
+                        <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[16px] outline-primary mb-1' type='text' {...register("lastName", { required: "Last Name is Required" })}
                             placeholder='Enter last name' /> <br />
                         {errors?.lastName && (
-                            <span className='text-sm text-red-500'>This field is required</span>
+                            <span className='text-sm text-red-500'>{errors.lastName.message}</span>
                         )}
                     </div>
                     {/* button  */}
