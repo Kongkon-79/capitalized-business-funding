@@ -12,7 +12,7 @@ const reviews = [
     location: 'Philadelphia, PA',
     rating: 5,
     text: 'Being a social networker, you need a lot of tools and tools to help Sunny. The best thing about this platform is that it builds applications process analysis and social media marketing tools that work with ease.',
-    image: '/assets/images/customer.png',
+    image: '/assets/images/sunny.png',
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const reviews = [
     location: 'Philadelphia, PA',
     rating: 5,
     text: 'Being a social networker, you need a lot of tools and tools to help Sunny. The best thing about this platform is that it builds applications process analysis and social media marketing tools that work with ease.',
-    image: '/assets/images/customer.png',
+    image: '/assets/images/sunny.png',
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const reviews = [
     location: 'Philadelphia, PA',
     rating: 5,
     text: 'Being a social networker, you need a lot of tools and tools to help Sunny. The best thing about this platform is that it builds applications process analysis and social media marketing tools that work with ease.',
-    image: '/assets/images/customer.png',
+    image: '/assets/images/sunny.png',
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const reviews = [
     location: 'Philadelphia, PA',
     rating: 5,
     text: 'Being a social networker, you need a lot of tools and tools to help Sunny. The best thing about this platform is that it builds applications process analysis and social media marketing tools that work with ease.',
-    image: '/assets/images/customer.png',
+    image: '/assets/images/sunny.png',
   },
   {
     id: 5,
@@ -44,7 +44,7 @@ const reviews = [
     location: 'Philadelphia, PA',
     rating: 5,
     text: 'Being a social networker, you need a lot of tools and tools to help Sunny. The best thing about this platform is that it builds applications process analysis and social media marketing tools that work with ease.',
-    image: '/assets/images/customer.png',
+    image: '/assets/images/sunny.png',
   },
   {
     id: 6,
@@ -52,7 +52,7 @@ const reviews = [
     location: 'Philadelphia, PA',
     rating: 5,
     text: 'Being a social networker, you need a lot of tools and tools to help Sunny. The best thing about this platform is that it builds applications process analysis and social media marketing tools that work with ease.',
-    image: '/assets/images/customer.png',
+    image: '/assets/images/sunny.png',
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ const reviews = [
     location: 'Philadelphia, PA',
     rating: 5,
     text: 'Being a social networker, you need a lot of tools and tools to help Sunny. The best thing about this platform is that it builds applications process analysis and social media marketing tools that work with ease.',
-    image: '/assets/images/customer.png',
+    image: '/assets/images/sunny.png',
   },
   {
     id: 8,
@@ -68,7 +68,7 @@ const reviews = [
     location: 'Philadelphia, PA',
     rating: 5,
     text: 'Being a social networker, you need a lot of tools and tools to help Sunny. The best thing about this platform is that it builds applications process analysis and social media marketing tools that work with ease.',
-    image: '/assets/images/customer.png',
+    image: '/assets/images/sunny.png',
   },
 ]
 
@@ -99,9 +99,9 @@ export function CustomerReviews() {
         {getVisibleReviews().map((review, idx) => (
           <div
             key={review.id}
-            className={` relative bg-[#1B2A4E] text-white rounded-lg p-6 shadow-lg transition-all duration-500 ease-in-out w-2xl ${idx === 0 ? 'opacity-50 scale-90 -translate-x-[-10%] h-[280px]' :
+            className={` relative bg-[#1B2A4E] text-white rounded-lg p-6 shadow-lg transition-all duration-500 ease-in-out w-2xl ${idx === 0 ? 'opacity-50 scale-90 translate-x-[-10%] h-[280px]' :
                 idx === 1 ? 'scale-105 z-20 h-[300px] ' :
-                  'opacity-50 scale-90 -translate-x-[10%] h-[280px]'
+                  'opacity-50 scale-90 translate-x-[10%] h-[280px]'
               }`}
           >
             <div className=" flex items-center gap-4 mb-4">
