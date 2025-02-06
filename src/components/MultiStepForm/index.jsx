@@ -44,7 +44,7 @@ const MultiStepFormAllComponents = () => {
         });
         console.log(data)
         methods.reset();
-        navigate('/');
+        navigate('/second-step');
 
     }
 

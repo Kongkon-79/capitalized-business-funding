@@ -8,6 +8,8 @@ import Step2 from './Step2';
 import Step3 from './Step3';
 import Step4 from './Step4';
 import Step5 from './Step5';
+import Step6 from './Step6';
+import Step7 from './Step7';
 
 const MultiStepFormAllComponents2 = () => {
     const navigate = useNavigate();
@@ -54,7 +56,7 @@ const MultiStepFormAllComponents2 = () => {
         });
         console.log(data);
         methods.reset();
-        navigate('/');
+        navigate('/message');
     };
 
     return (
@@ -65,6 +67,8 @@ const MultiStepFormAllComponents2 = () => {
                         { id: 1, name: "Owners" },
                         { id: 2, name: "Business" },
                         { id: 3, name: "Application" },
+                        { id: 4, name: "Documents" },
+                        { id: 5, name: "Additional" },
                     ]} />
                 </div>
                 <form onSubmit={methods.handleSubmit(onSubmit)}>
@@ -79,6 +83,8 @@ const MultiStepFormAllComponents2 = () => {
                         <Step4 handleNextStep={handleNextStep} handlePreviousStep={handlePreviousStep} />
                     )}
                     {currentStep === 3 && <Step5 handleNextStep={handleNextStep} handlePreviousStep={handlePreviousStep} data={formData} />}
+                    {currentStep === 4 && <Step6 handleNextStep={handleNextStep} handlePreviousStep={handlePreviousStep} />}
+                    {currentStep === 5 && <Step7 handleNextStep={handleNextStep} handlePreviousStep={handlePreviousStep} />}
                 </form>
             </FormProvider>
         </div>

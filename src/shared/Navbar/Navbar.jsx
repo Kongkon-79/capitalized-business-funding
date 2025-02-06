@@ -7,7 +7,10 @@ const Navbar = () => {
             <div className='flex items-center justify-between py-[16px] px-[24px] bg-white rounded-[24px] border border-white shadow-[0px_-4px_12px_0px_rgba(61,110,234,0.15),0px_4px_12px_0px_rgba(1,32,69,0.15)]'>
                 {/* logo  */}
                 <div>
-                    <img src='/assets/images/nav_logo.png' alt='nav logo' width={193} height={44} />
+                    <NavLink to="/">
+                        <img src='/assets/images/nav_logo.png' alt='nav logo' width={193} height={44} />
+                    </NavLink>
+
                 </div>
                 {/* menu  */}
                 <div>

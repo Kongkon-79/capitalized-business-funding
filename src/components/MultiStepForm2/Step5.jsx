@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { FaArrowLeftLong } from "react-icons/fa6";
 
+import { format } from 'date-fns';
+import { BadgeCheck } from 'lucide-react';
+
+const formatDate = (date) => {
+    return format(date, "EEEE, MMMM d 'at' h:mm a");
+};
+
 const Step5 = ({ handlePreviousStep, handleNextStep, data }) => {
     const { register, formState: { errors } } = useFormContext();
-    console.log("data step 5", data)
+    const [currentTime, setCurrentTime] = useState(new Date());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentTime(new Date()); // Update time every second
+        }, 1000);
+
+        return () => clearInterval(interval); // Cleanup interval on component unmount
+    }, []);
+
     return (
         <div className='bg-white rounded-xl p-[32px] mb-20'>
             {/* Owner part  */}
@@ -152,9 +168,12 @@ const Step5 = ({ handlePreviousStep, handleNextStep, data }) => {
                             )}
                         </div>
                         <div className='md:col-span-3'>
-                            <input className='w-[18px] h-[18px]' type='checkbox' {...register("terms", { required: "you must agree to continue" })} />
-                            <label className='pl-2 text-sm font-medium text-primary leading-[24px]' htmlFor="terms">By checking this box, I agree that the electronic digitized signatures I apply on the following document are representations of my signature and legally valid and binding as if I had signed the document with ink on paper in accordance with the Uniform Electronic Transactions Act (UETA) and the Electronic Signatures in Global and National Commerce Act (E-SIGN) of 2000. Each of the above-listed businesses and business owners/officers (individually and collectively, "you") authorize Capitalized and each of its representatives, successors, assigns, and designees ("Recipients") that may be involved with or acquire commercial loans having daily repayment features or purchases of future receivables, including Merchant Cash Advance transactions, to obtain consumer or personal, business, and investigative reports and other information about you, including credit card processor statements and bank statements, from one or more consumer reporting agencies, such as TransUnion, Experian, and Equifax, and from other credit bureaus, banks, creditors, and third parties. You also authorize Capitalized to transmit this application form, along with any of the foregoing information obtained in connection with this application, to any or all of the Recipients for the foregoing purposes. You also consent to the release, by any creditor or financial institution, of any information relating to any of you to Capitalized and to each of the Recipients on its own behalf. You agree that by signing, you consent and request that Capitalized, its affiliates, and those acting on its/their behalf may call or text you using an automated telephone dialing system and/or a prerecorded message. The types of calls you may receive include calls to encourage the purchase of goods or services, as well as calls to provide information or to service your account. Calls can be made to any residential or wireless numbers you provide to the Company, including those provided here, even if listed on a national or state Do Not Call registry. By providing your email address, you are permitting us to email you information about our financing and funding plans as well as other related products and services. We will keep your information secure, and you can unsubscribe at any time.</label> <br />
-                            {errors?.terms && <span className='text-sm text-red-500'>{errors.terms.message}</span>}
+                            <p className='w-full flex items-center gap-2 bg-green-500 text-white p-4 rounded-lg text-xl font-bold leading-[30px] '> <BadgeCheck /> {formatDate(currentTime)}</p>
+                        </div>
+                        <div className='md:col-span-3'>
+                            <input className='w-[18px] h-[18px]' type='checkbox' {...register("termsAndCondition", { required: "you must agree to continue" })} />
+                            <label className='pl-2 text-sm font-medium text-primary leading-[24px]' htmlFor="termsAndCondition">By checking this box, I agree that the electronic digitized signatures I apply on the following document are representations of my signature and legally valid and binding as if I had signed the document with ink on paper in accordance with the Uniform Electronic Transactions Act (UETA) and the Electronic Signatures in Global and National Commerce Act (E-SIGN) of 2000. Each of the above-listed businesses and business owners/officers (individually and collectively, "you") authorize Capitalized and each of its representatives, successors, assigns, and designees ("Recipients") that may be involved with or acquire commercial loans having daily repayment features or purchases of future receivables, including Merchant Cash Advance transactions, to obtain consumer or personal, business, and investigative reports and other information about you, including credit card processor statements and bank statements, from one or more consumer reporting agencies, such as TransUnion, Experian, and Equifax, and from other credit bureaus, banks, creditors, and third parties. You also authorize Capitalized to transmit this application form, along with any of the foregoing information obtained in connection with this application, to any or all of the Recipients for the foregoing purposes. You also consent to the release, by any creditor or financial institution, of any information relating to any of you to Capitalized and to each of the Recipients on its own behalf. You agree that by signing, you consent and request that Capitalized, its affiliates, and those acting on its/their behalf may call or text you using an automated telephone dialing system and/or a prerecorded message. The types of calls you may receive include calls to encourage the purchase of goods or services, as well as calls to provide information or to service your account. Calls can be made to any residential or wireless numbers you provide to the Company, including those provided here, even if listed on a national or state Do Not Call registry. By providing your email address, you are permitting us to email you information about our financing and funding plans as well as other related products and services. We will keep your information secure, and you can unsubscribe at any time.</label> <br />
+                            {errors?.termsAndCondition && <span className='text-sm text-red-500'>{errors.termsAndCondition.message}</span>}
                         </div>
                         {/* button  */}
                         <div className='md:col-span-3 flex items-center justify-between py-[30px]'>
