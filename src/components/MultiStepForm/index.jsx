@@ -13,8 +13,7 @@ import Step8 from './Step8';
 import Step9 from './Step9';
 import Step10 from './Step10';
 import Swal from 'sweetalert2';
-import Review from '../Homes/Review';
-// import { CustomerReviews } from './CustomerReviews/CustomerReviews';
+import { CustomerReviews } from './CustomerReviews/CustomerReviews';
 
 const MultiStepFormAllComponents = () => {
     const navigate = useNavigate();
@@ -81,8 +80,9 @@ const MultiStepFormAllComponents = () => {
             </FormProvider>
 
             {/* customer review  */}
-            {/* <CustomerReviews/> */}
-            <Review/>
+            <section>
+                <CustomerReviews/>
+            </section>
         </div>
     );
 };
