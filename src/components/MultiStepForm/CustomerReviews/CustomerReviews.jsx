@@ -89,19 +89,19 @@ export function CustomerReviews() {
   };
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto px-4 pb-12">
-      <div className="text-center mb-12">
+    <div className="relative w-full max-w-6xl mx-auto px-4 pb-6 md:pb-9 lg:pb-12">
+      <div className="text-center mb-6 md:mb-9 lg:mb-12">
         <h2 className="text-3xl font-bold mb-2 text-gray-900">Customer</h2>
         <p className="text-gray-500 italic">Review</p>
       </div>
 
-      <div className="relative flex justify-center items-center gap-0 overflow-hidden">
+      <div className="relative flex flex-col md:flex-row justify-center items-center gap-0 overflow-hidden">
         {getVisibleReviews().map((review, idx) => (
           <div
             key={review.id}
-            className={` relative bg-[#1B2A4E] text-white rounded-lg p-6 shadow-lg transition-all duration-500 ease-in-out w-2xl ${idx === 0 ? 'opacity-50 scale-90 translate-x-[-10%] h-[280px]' :
+            className={` relative bg-[#1B2A4E] text-white rounded-lg p-6 shadow-lg transition-all duration-500 ease-in-out w-2xl ${idx === 0 ? 'opacity-50 scale-90 md:translate-x-[-10%] h-[280px]' :
                 idx === 1 ? 'scale-105 z-20 h-[300px] ' :
-                  'opacity-50 scale-90 translate-x-[10%] h-[280px]'
+                  'opacity-50 scale-90 md:translate-x-[10%] w-full h-[280px]'
               }`}
           >
             <div className=" flex items-center gap-4 mb-4">

@@ -18,7 +18,7 @@ const ProgressSteps = ({ currentStep, steps }) => {
               />
             </div>
             <span
-              className={`absolute left-0 right-0 text-start mt-2 text-sm
+              className={`absolute left-0 right-0 text-start mt-2 text-xs md:text-sm
                 ${currentStep >= step.id ? "text-primary font-medium" : "text-gray-500"}`}
             >
               {step.name}

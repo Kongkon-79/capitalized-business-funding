@@ -22,13 +22,13 @@ const Step5 = ({ handlePreviousStep, handleNextStep, data }) => {
     }, []);
 
     return (
-        <div className='bg-white rounded-xl p-[32px] mb-20'>
+        <div className='bg-white rounded-xl p-[24px] md:p-[28px] lg:p-[32px] mb-10 md:mb-14 lg:mb-20'>
             {/* Owner part  */}
             <div>
-                <h4 className='text-4xl font-bold text-primary leading-[48px] text-center'>Application</h4>
-                <div className='border rounded-xl p-5 shadow-xl mt-6'>
-                    <h5 className='text-3xl font-semibold text-secondary leading-[40px] text-left pb-2'>Owner Information</h5>
-                    <div className='grid grid-cols-1 md:gird-cols-2 lg:grid-cols-3 gap-5'>
+                <h4 className='text-3xl md:text-4xl font-bold text-primary leading-[48px] text-center'>Application</h4>
+                <div className='border rounded-xl p-3 md:p-4 lg:p-5 shadow-xl mt-6'>
+                    <h5 className='text-2xl md:text-3xl font-semibold text-secondary leading-[40px] text-center md:text-left pb-2'>Owner Information</h5>
+                    <div className='grid grid-cols-2 md:gird-cols-2 lg:grid-cols-3 gap-3 md:gap-5'>
                         <div className='md:col-span-1'>
                             <span className='text-base font-normal text-secondary/50 leading-[30px]'>First Name : </span>
                             <br />
@@ -93,8 +93,8 @@ const Step5 = ({ handlePreviousStep, handleNextStep, data }) => {
                 </div>
                 {/* Business part  */}
                 <div className='border rounded-xl p-5 shadow-xl mt-6'>
-                    <h5 className='text-3xl font-semibold text-secondary leading-[40px] text-left pb-2'>Business</h5>
-                    <div className='grid grid-cols-1 md:gird-cols-2 lg:grid-cols-3 gap-5'>
+                    <h5 className='text-2xl md:text-3xl font-semibold text-secondary leading-[40px] text-center md:text-left pb-2'>Business</h5>
+                    <div className='grid grid-cols-2 md:gird-cols-2 lg:grid-cols-3 gap-3  md:gap-5'>
                         <div className='md:col-span-1'>
                             <span className='text-base font-normal text-secondary/50 leading-[30px]'>Business DBA : </span>
                             <br />
@@ -149,26 +149,26 @@ const Step5 = ({ handlePreviousStep, handleNextStep, data }) => {
                 </div>
                 {/* Applicant E-Signature part  */}
                 <div className='border rounded-xl p-5 shadow-xl mt-6'>
-                    <h5 className='text-3xl font-semibold text-secondary leading-[40px] text-left pb-2'>Applicant E-Signature</h5>
-                    <div className='grid grid-cols-1 md:grid-cols-3 gap-10 pt-8'>
+                    <h5 className='text-2xl md:text-3xl font-semibold text-secondary leading-[40px] text-center md:text-left pb-2'>Applicant E-Signature</h5>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 lg:gap-10 pt-4 md:pt-6 lg:pt-8'>
                         <div className='md:col-span-2'>
-                            <label className='text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="fullName">Full Name</label> <br />
-                            <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[16px] outline-primary mb-1' type='text' {...register("fullName", { required: "Full Name is Required" })}
+                            <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="fullName">Full Name</label> <br />
+                            <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[8px] md:mt-[12px] lg:mt-[16px] outline-primary mb-1' type='text' {...register("fullName", { required: "Full Name is Required" })}
                                 placeholder='Enter your Full Name' /> <br />
                             {errors?.fullName && (
                                 <span className='text-sm text-red-500'>{errors.fullName.message}</span>
                             )}
                         </div>
                         <div className='md:col-span-1'>
-                            <label className='text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="title">Title</label> <br />
-                            <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[16px] outline-primary mb-1' type='text' {...register("title", { required: "Title is Required" })}
+                            <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="title">Title</label> <br />
+                            <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[8px] md:mt-[12px] lg:mt-[16px] outline-primary mb-1' type='text' {...register("title", { required: "Title is Required" })}
                                 placeholder='Enter your Title' /> <br />
                             {errors?.title && (
                                 <span className='text-sm text-red-500'>{errors.title.message}</span>
                             )}
                         </div>
                         <div className='md:col-span-3'>
-                            <p className='w-full flex items-center gap-2 bg-green-500 text-white p-4 rounded-lg text-xl font-bold leading-[30px] '> <BadgeCheck /> {formatDate(currentTime)}</p>
+                            <p className='w-full flex items-center gap-2 bg-green-500 text-white p-2 md:p-3 lg:p-4 rounded-lg text-base md:text-lg lg:text-xl font-bold leading-[30px] '> <BadgeCheck /> {formatDate(currentTime)}</p>
                         </div>
                         <div className='md:col-span-3'>
                             <input className='w-[18px] h-[18px]' type='checkbox' {...register("termsAndCondition", { required: "you must agree to continue" })} />
