@@ -7,12 +7,12 @@ const Step2 = ({handleNextStep, handlePreviousStep}) => {
   const currentYear = new Date().getFullYear();
   const years = Array.from({ length: currentYear - 2010 }, (_, i) => 2011 + i);
   return (
-    <div className='bg-white rounded-[12px] mb-[107px]'>
-      <div className='grid grid-cols-1 md:grid-cols-5'>
-        <div className='md:col-span-3 pl-[47px] pr-[65px] flex flex-col justify-center'>
+    <div  className='bg-white rounded-[10px] md:rounded-[12px] pt-[25px] md:pt-[35px] lg:pt-[44px] pb-[30px] md:pb-[45px] lg:pb-[60px] px-5 mx:px-10 lg:px-[65px] mb-[40px] md:mb-[70px] lg:mb-[100px] xl:mb-[125px]'>
+      <div className='grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-0'>
+        <div className='md:col-span-3 md:pr-[65px] flex flex-col justify-center'>
           
-          <div className='pt-[40px]'>
-            <label className='text-2xl font-medium leading-[24px] text-secondary-50' htmlFor="month">Business Start Month</label> <br />
+          <div className='pt-[20px] md:pt-[30px] lg:pt-[40px]'>
+            <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-50' htmlFor="month">Business Start Month</label> <br />
             <select
               {...register("month", { required: "Business Start Month is Required" })}
               className="w-full py-[12px] pl-[16px] pr-[19px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[17px] outline-primary text-primary mb-1"
@@ -27,8 +27,8 @@ const Step2 = ({handleNextStep, handlePreviousStep}) => {
             </select>
             {errors?.month && <p className="text-sm text-red-500">{errors.month.message}</p>}
           </div>
-          <div className='pt-[40px]'>
-            <label className='text-2xl font-medium leading-[24px] text-secondary-50' htmlFor="lastYear">Last Year</label> <br />
+          <div className='pt-[20px] md:pt-[30px] lg:pt-[40px]'>
+            <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-50' htmlFor="lastYear">Last Year</label> <br />
             <select
               {...register("lastYear", { required: "Last Year is Required" })}
               className="w-full py-[12px] pl-[16px] pr-[19px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[17px] outline-primary text-primary mb-1"
@@ -41,7 +41,7 @@ const Step2 = ({handleNextStep, handlePreviousStep}) => {
             {errors?.lastYear && <p className="text-sm text-red-500">{errors.lastYear.message}</p>}
           </div>
           {/* button  */}
-          <div className='flex items-center justify-between pt-[61px]'>
+          <div className='flex items-center justify-between pt-[35px] md:pt-[50px] lg:pt-[61px]'>
             <button type='button' onClick={handlePreviousStep} className='flex items-center gap-[8px] text-base font-normal leading-[20px] text-primary py-[14px] pl-[14px] pr-[19px] bg-white border border-primary rounded-[4px]'> <FaArrowLeftLong/> Back </button>
             <button type='button' onClick={handleNextStep} className='text-base font-normal leading-[20px] text-white py-[14px] px-[40px] bg-primary rounded-[8px]'>Continue</button>
           </div>

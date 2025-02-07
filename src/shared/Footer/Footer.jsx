@@ -4,7 +4,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <div className='container flex items-center justify-between border-t border-primary/50 pt-[27px]'>
+            <div className='container flex flex-col md:flex-row items-center justify-between gap-2 md:gap-0 border-t border-primary/50 pt-[27px]'>
                 <div>
                     <p className='text-base font-normal leading-[30px] md:leading-[45px] lg:leading-[55px] text-primary/50'>@ 2025 Business Funding, All eights Reseerved</p>
                 </div>

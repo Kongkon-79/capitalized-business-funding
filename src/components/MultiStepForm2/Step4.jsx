@@ -47,51 +47,51 @@ const Step4 = ({ handlePreviousStep, handleNextStep }) => {
         },
     ];
     return (
-        <div className='bg-white rounded-xl p-[32px] mb-20'>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-10 pt-8'>
+        <div className='bg-white rounded-xl p-[24px] md:p-[28px] lg:p-[32px] mb-10 md:mb-14 lg:mb-20'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 lg:gap-10 pt-4 md:pt-6 lg:pt-8'>
                 <div className='md:col-span-1'>
-                    <label className='text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="businessLegalName">Business Legal Name</label> <br />
-                    <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[16px] outline-primary mb-1' type='text' {...register("businessLegalName", { required: "Business Legal Name is Required" })}
+                    <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="businessLegalName">Business Legal Name</label> <br />
+                    <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[8px] md:mt-[12px] lg:mt-[16px] outline-primary mb-1' type='text' {...register("businessLegalName", { required: "Business Legal Name is Required" })}
                         placeholder='Enter Business Legal Name' /> <br />
                     {errors?.businessLegalName && (
                         <span className='text-sm text-red-500'>{errors.businessLegalName.message}</span>
                     )}
                 </div>
                 <div className='md:col-span-1'>
-                    <label className='text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="taxID">Tax ID</label> <br />
-                    <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[16px] outline-primary mb-1' type='text' {...register("taxID", { required: "Tax ID is Required" })}
+                    <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="taxID">Tax ID</label> <br />
+                    <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[8px] md:mt-[12px] lg:mt-[16px] outline-primary mb-1' type='text' {...register("taxID", { required: "Tax ID is Required" })}
                         placeholder='27-1115599' /> <br />
                     {errors?.taxID && (
                         <span className='text-sm text-red-500'>{errors.taxID.message}</span>
                     )}
                 </div>
                 <div className='md:col-span-1'>
-                    <label className='text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="businessAddress">Business Address</label> <br />
-                    <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[16px] outline-primary mb-1' type='text' {...register("businessAddress", { required: "Business Address is Required" })}
+                    <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="businessAddress">Business Address</label> <br />
+                    <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[8px] md:mt-[12px] lg:mt-[16px] outline-primary mb-1' type='text' {...register("businessAddress", { required: "Business Address is Required" })}
                         placeholder='Enter a Location' /> <br />
                     {errors?.businessAddress && (
                         <span className='text-sm text-red-500'>{errors.businessAddress.message}</span>
                     )}
                 </div>
                 <div className='md:col-span-1'>
-                    <label className='text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="bCity">City</label> <br />
-                    <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[16px] outline-primary mb-1' type='text' {...register("bCity", { required: "City is Required" })}
+                    <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="bCity">City</label> <br />
+                    <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[8px] md:mt-[12px] lg:mt-[16px] outline-primary mb-1' type='text' {...register("bCity", { required: "City is Required" })}
                         placeholder='Enter your City' /> <br />
                     {errors?.bCity && (
                         <span className='text-sm text-red-500'>{errors.bCity.message}</span>
                     )}
                 </div>
                 <div className='md:col-span-1'>
-                    <label className='text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="bState">State</label> <br />
-                    <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[16px] outline-primary mb-1' type='text' {...register("bState", { required: "State is Required" })}
+                    <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="bState">State</label> <br />
+                    <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[8px] md:mt-[12px] lg:mt-[16px] outline-primary mb-1' type='text' {...register("bState", { required: "State is Required" })}
                         placeholder='Enter your State' /> <br />
                     {errors?.bState && (
                         <span className='text-sm text-red-500'>{errors.bState.message}</span>
                     )}
                 </div>
                 <div className='md:col-span-1'>
-                    <label className='text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="bZipCode">Zip Code</label> <br />
-                    <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[16px] outline-primary mb-1' type='text' {...register("bZipCode", { required: "Zip Code is Required" })}
+                    <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="bZipCode">Zip Code</label> <br />
+                    <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[8px] md:mt-[12px] lg:mt-[16px] outline-primary mb-1' type='text' {...register("bZipCode", { required: "Zip Code is Required" })}
                         placeholder='10001' /> <br />
                     {errors?.bZipCode && (
                         <span className='text-sm text-red-500'>{errors.bZipCode.message}</span>
@@ -99,7 +99,7 @@ const Step4 = ({ handlePreviousStep, handleNextStep }) => {
                 </div>
                 
                 <div className='md:col-span-1'>
-                    <label className='text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="incorporationType">Incorporation Type</label> <br />
+                    <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="incorporationType">Incorporation Type</label> <br />
                     <select
                         {...register("incorporationType", { required: "Incorporation Type is Required" })}
                         className="w-full py-[12px] pl-[16px] pr-[19px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[17px] outline-primary mb-1"
@@ -119,8 +119,8 @@ const Step4 = ({ handlePreviousStep, handleNextStep }) => {
                     )}
                 </div>
                 <div className='md:col-span-1'>
-                    <label className='text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="industryType">Industry Type</label> <br />
-                    <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[16px] outline-primary mb-1' type='text' {...register("industryType", { required: "Industry Type is Required" })}
+                    <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-100' htmlFor="industryType">Industry Type</label> <br />
+                    <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[8px] md:mt-[12px] lg:mt-[16px] outline-primary mb-1' type='text' {...register("industryType", { required: "Industry Type is Required" })}
                         placeholder='Provide a simple description of what your business is' /> <br />
                     {errors?.industryType && (
                         <span className='text-sm text-red-500'>{errors.industryType.message}</span>
