@@ -42,9 +42,13 @@ const Navbar = () => {
             </div>
             {/* menu part  */}
             {
-                !isOpen && <ul className={`bg-white  flex flex-col items-center gap-[32px] fixed top-0 h-[50%] z-50 ${!isOpen ? "w-[75%] left-0" : "w-full -left-[100%]"}`}>
+                !isOpen && <ul className={`bg-white  flex flex-col items-center gap-[32px] fixed -top-1 h-[50%] z-50 ${!isOpen ? "w-[75%] right-0" : "w-full -right-[100%]"}`}>
+                    <div className='w-full flex items-center justify-start pl-2 pt-3'>
+                        <RxCross2 className='w-[24px] h-[24px] text-primary' onClick={() => setIsOpen(!isOpen)} />
+                    </div>
+
                     <NavLink to="/">
-                        <li className='text-base font-medium leading-[28px] text-secondary-200 hover:text-secondary-100 pt-10'>Home</li>
+                        <li className='text-base font-medium leading-[28px] text-secondary-200 hover:text-secondary-100'>Home</li>
                     </NavLink>
                     <li className='text-base font-medium leading-[28px] text-secondary-200 hover:text-secondary-100'>How it work</li>
                     <li className='text-base font-medium leading-[28px] text-secondary-200 hover:text-secondary-100'>Why Capitalized?</li>
