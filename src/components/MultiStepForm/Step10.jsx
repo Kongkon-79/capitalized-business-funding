@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Step10 = () => {
+const Step10 = ({isPending}) => {
     return (
         <div className='bg-white rounded-[10px] md:rounded-[12px] pt-[25px] md:pt-[35px] lg:pt-[44px] pb-[30px] md:pb-[45px] lg:pb-[60px] px-5 mx:px-10 lg:px-[65px] mb-[40px] md:mb-[70px] lg:mb-[100px] xl:mb-[125px]'>
             <div className='grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-0'>
@@ -11,7 +11,7 @@ const Step10 = () => {
                     </div>
                     {/* button  */}
                     <div className='flex items-center justify-between pt-[30px] md:pt-[40px]'>
-                        <button type='submit' className='w-full text-base font-normal leading-[20px] text-white py-[14px] px-[40px] bg-primary rounded-[8px]'>Finish</button>
+                        <button disabled={isPending} type='submit' className='w-full text-base font-normal leading-[20px] text-white py-[14px] px-[40px] bg-primary rounded-[8px]'>{isPending ? "Finishing..." : "Finish"}</button>
                     </div>
                 </div>
                 <div className='md:col-span-2'>

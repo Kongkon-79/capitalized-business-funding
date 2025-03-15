@@ -12,9 +12,9 @@ const Step2 = ({handleNextStep, handlePreviousStep}) => {
         <div className='md:col-span-3 md:pr-[65px] flex flex-col justify-center'>
           
           <div className='pt-[20px] md:pt-[30px] lg:pt-[40px]'>
-            <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-50' htmlFor="month">Business Start Month</label> <br />
+            <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-50' htmlFor="startMonth">Business Start Month</label> <br />
             <select
-              {...register("month", { required: "Business Start Month is Required" })}
+              {...register("startMonth", { required: "Business Start Month is Required" })}
               className="w-full py-[12px] pl-[16px] pr-[19px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[17px] outline-primary text-primary mb-1"
             >
               <option className='text-base font-normal text-secondary-100/50 leading-[36px]' value="">Select Month</option>
@@ -25,12 +25,12 @@ const Step2 = ({handleNextStep, handlePreviousStep}) => {
                 <option className='text-base font-normal text-primary leading-[36px]' key={index} value={month}>{month}</option>
               ))}
             </select>
-            {errors?.month && <p className="text-sm text-red-500">{errors.month.message}</p>}
+            {errors?.startMonth && <p className="text-sm text-red-500">{errors.startMonth.message}</p>}
           </div>
           <div className='pt-[20px] md:pt-[30px] lg:pt-[40px]'>
-            <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-50' htmlFor="lastYear">Last Year</label> <br />
+            <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-50' htmlFor="startYear">Last Year</label> <br />
             <select
-              {...register("lastYear", { required: "Last Year is Required" })}
+              {...register("startYear", { required: "Last Year is Required" })}
               className="w-full py-[12px] pl-[16px] pr-[19px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[17px] outline-primary text-primary mb-1"
             >
               <option className='text-base font-normal text-secondary-100/50 leading-[36px]' value="">Select Year</option>
@@ -38,7 +38,7 @@ const Step2 = ({handleNextStep, handlePreviousStep}) => {
                 <option className='text-base font-normal text-primary leading-[36px]' key={year} value={year}>{year}</option>
               ))}
             </select>
-            {errors?.lastYear && <p className="text-sm text-red-500">{errors.lastYear.message}</p>}
+            {errors?.startYear && <p className="text-sm text-red-500">{errors.startYear.message}</p>}
           </div>
           {/* button  */}
           <div className='flex items-center justify-between pt-[35px] md:pt-[50px] lg:pt-[61px]'>

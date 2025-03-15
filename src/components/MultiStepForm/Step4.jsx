@@ -10,14 +10,14 @@ const Step4 = ({ handleNextStep, handlePreviousStep }) => {
                 <div className='md:col-span-3 md:pr-[65px] flex flex-col justify-center'>
 
                     <div className='pt-[20px] md:pt-[30px] lg:pt-[40px]'>
-                        <label className='text-lg md:text-xl font-medium leading-[24px] text-secondary-50' htmlFor="payment">Does your business accept credit cards as form of payment</label> <br />
+                        <label className='text-lg md:text-xl font-medium leading-[24px] text-secondary-50' htmlFor="creditCardPayment">Does your business accept credit cards as form of payment</label> <br />
                         <div className="mt-[16px] flex items-center justify-center gap-6">
                             {/* Yes Radio Button */}
                             <label className="flex items-center gap-2 text-primary text-[15px] leading-[24px] cursor-pointer">
                                 <input
                                     type="radio"
-                                    value="yes"
-                                    {...register("payment", { required: "Credit cards as form of payment is Required" })}
+                                    value="Yes"
+                                    {...register("creditCardPayment", { required: "Credit cards as form of payment is Required" })}
                                     className="w-5 h-5 accent-primary mb-1"
                                 />
                                 Yes
@@ -27,15 +27,15 @@ const Step4 = ({ handleNextStep, handlePreviousStep }) => {
                             <label className="flex items-center gap-2 text-primary text-[15px] leading-[24px] cursor-pointer">
                                 <input
                                     type="radio"
-                                    value="no"
-                                    {...register("payment", { required: "Credit cards as form of payment is Required" })}
+                                    value="No"
+                                    {...register("creditCardPayment", { required: "Credit cards as form of payment is Required" })}
                                     className="w-5 h-5 accent-primary mb-1"
                                 />
                                 No
                             </label>
                         </div>
-                        {errors?.payment && (
-                            <p className='text-sm text-red-500 text-center'>{errors.payment.message}</p>
+                        {errors?.creditCardPayment && (
+                            <p className='text-sm text-red-500 text-center'>{errors.creditCardPayment.message}</p>
                         )}
                     </div>
                     {/* button  */}

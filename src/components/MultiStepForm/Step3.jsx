@@ -10,11 +10,11 @@ const Step3 = ({ handleNextStep, handlePreviousStep }) => {
                 <div className='md:col-span-3 md:pr-[65px] flex flex-col justify-center'>
 
                     <div className='pt-[20px] md:pt-[30px] lg:pt-[40px]'>
-                        <label className='text-xl md:text-2xl font-medium leading-[30px] text-secondary-50' htmlFor="revenue">What is your average monthly revenue?</label> <br />
-                        <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[17px] outline-primary mb-1' type='text' {...register("revenue", { required: "Average Monthly Revenue is Required" })}
+                        <label className='text-xl md:text-2xl font-medium leading-[30px] text-secondary-50' htmlFor="monthlyRevenue">What is your average monthly revenue?</label> <br />
+                        <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[17px] outline-primary mb-1' type='text' {...register("monthlyRevenue", { required: "Average Monthly Revenue is Required" })}
                             placeholder='$25,000' /> <br />
-                        {errors?.revenue && (
-                            <span className='text-sm text-red-500'>{errors.revenue.message}</span>
+                        {errors?.monthlyRevenue && (
+                            <span className='text-sm text-red-500'>{errors.monthlyRevenue.message}</span>
                         )}
                     </div>
                     {/* button  */}
