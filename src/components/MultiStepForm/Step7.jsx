@@ -9,11 +9,11 @@ const Step7 = ({ handleNextStep }) => {
                 <div className='md:col-span-3 md:pr-[65px] flex flex-col justify-center'>
 
                     <div className='pt-[20px] md:pt-[30px] lg:pt-[40px]'>
-                        <label className='text-2xl font-medium leading-[24px] text-secondary-50' htmlFor="business">What is legal name of your business?</label> <br />
-                        <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[17px] outline-primary mb-1' type='text' {...register("business", { required: "Business name is Required" })}
+                        <label className='text-2xl font-medium leading-[24px] text-secondary-50' htmlFor="businessName">What is legal name of your business?</label> <br />
+                        <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[17px] outline-primary mb-1' type='text' {...register("businessName", { required: "Business name is Required" })}
                             placeholder='Enter business name' /> <br />
-                        {errors?.business && (
-                            <span className='text-sm text-red-500'>{errors.business.message}</span>
+                        {errors?.businessName && (
+                            <span className='text-sm text-red-500'>{errors.businessName.message}</span>
                         )}
                     </div>
                     {/* button  */}

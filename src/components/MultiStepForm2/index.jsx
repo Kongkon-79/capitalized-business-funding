@@ -20,7 +20,6 @@ const MultiStepFormAllComponents2 = () => {
     const [subStep, setSubStep] = useState(1); // Track sub-steps within progress steps
 
     const formData = watch();
-    console.log({ formData });
 
     const handleNextStep = async () => {
         const isValid = await trigger();

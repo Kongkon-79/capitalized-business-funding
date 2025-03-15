@@ -17,11 +17,11 @@ const Step9 = ({ handleNextStep }) => {
                         )}
                     </div>
                     <div className='pt-[20px] md:pt-[30px] lg:pt-[40px]'>
-                        <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-50' htmlFor="phoneNumber">Phone Number</label> <br />
-                        <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[16px] outline-primary mb-1' type='text' {...register("phoneNumber", { required: "Phone Number is Required" })}
+                        <label className='text-xl md:text-2xl font-medium leading-[24px] text-secondary-50' htmlFor="phone">Phone Number</label> <br />
+                        <input className='w-full py-[11px] px-[12px] rounded-[4px] border border-[rgba(34,66,96,0.50)] mt-[16px] outline-primary mb-1' type='text' {...register("phone", { required: "Phone Number is Required" })}
                             placeholder='Enter Phone number' /> <br />
-                        {errors?.phoneNumber && (
-                            <span className='text-sm text-red-500'>{errors.phoneNumber.message}</span>
+                        {errors?.phone && (
+                            <span className='text-sm text-red-500'>{errors.phone.message}</span>
                         )}
                     </div>
                     {/* button  */}
