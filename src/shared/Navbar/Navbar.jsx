@@ -27,7 +27,7 @@ const Navbar = () => {
                 Home
               </li>
             </NavLink>
-            <NavLink to="/demo-data-fetch">
+            <NavLink to="/">
               <li className="text-base font-normal leading-[28px] text-secondary-200 hover:text-secondary-100">
                 How it work
               </li>
