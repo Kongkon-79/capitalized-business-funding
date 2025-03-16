@@ -12,10 +12,10 @@ import Step7 from "./Step7";
 import Step8 from "./Step8";
 import Step9 from "./Step9";
 import Step10 from "./Step10";
-import Swal from "sweetalert2";
 import { CustomerReviews } from "./CustomerReviews/CustomerReviews";
 import { useMutation } from "@tanstack/react-query";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const MultiStepFormAllComponents = () => {
   const navigate = useNavigate();
@@ -35,33 +35,27 @@ const MultiStepFormAllComponents = () => {
       }).then((res) => res.json()),
 
     onSuccess: (data) => {
-      if (data.status) {
-        toast.success(data.message, {
+      if (data?.status) {
+        toast.success(data.message || "Form Submitted Successfully.", {
           position: "top-right",
-          autoClose: 3000,
+          autoClose: 5000,
         });
-        Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "Your work has been saved",
-            showConfirmButton: false,
-            timer: 1500,
-          });
-          methods.reset();
+        setTimeout(() => {
           navigate("/second-step");
+        }, 3000);
       } else {
-        toast.error(data.message, {
+        toast.error(data.message || "Submission Failed!", {
           position: "top-right",
           autoClose: 3000,
         });
       }
     },
-    onError : (error) =>{
-        toast.error(error.message, {
-            position: "top-right",
-            autoClose: 3000,
-        })
-    }
+    onError: (error) => {
+      toast.error(error.message || "something went wrong", {
+        position: "top-right",
+        autoClose: 3000,
+      });
+    },
   });
 
   const handleNextStep = async () => {
@@ -76,21 +70,14 @@ const MultiStepFormAllComponents = () => {
   };
 
   const onSubmit = (data) => {
-    // Swal.fire({
-    //   position: "center",
-    //   icon: "success",
-    //   title: "Your work has been saved",
-    //   showConfirmButton: false,
-    //   timer: 1500,
-    // });
     mutate(data);
     console.log(data);
-    // methods.reset();
-    // navigate("/second-step");
   };
 
   return (
     <div className="container">
+      {/* Toast Notifications */}
+      <ToastContainer />
       <FormProvider {...methods}>
         <div>
           <ProgressSteps

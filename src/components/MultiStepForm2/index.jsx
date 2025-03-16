@@ -17,7 +17,7 @@ const MultiStepFormAllComponents2 = () => {
     const methods = useForm();
     const { trigger, watch } = methods;
     const [currentStep, setCurrentStep] = useState(1);
-    const [subStep, setSubStep] = useState(1); // Track sub-steps within progress steps
+    const [subStep, setSubStep] = useState(1);
 
     const formData = watch();
 
