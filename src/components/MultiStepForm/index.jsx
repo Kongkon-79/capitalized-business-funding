@@ -26,7 +26,7 @@ const MultiStepFormAllComponents = () => {
   const { mutate, isPending } = useMutation({
     mutationKey: ["form-data"],
     mutationFn: () =>
-      fetch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/first`, {
+      fetch(`http://localhost:5000/api/v1/first`, {
         method: "POST",
         body: JSON.stringify(methods.getValues()),
         headers: {
