@@ -51,7 +51,7 @@ const MultiStepFormAllComponents2 = () => {
   const { mutate, isPending } = useMutation({
     mutationKey: "second-form",
     mutationFn: (formData) =>
-      fetch(`http://localhost:5000/api/v1/second`, {
+      fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/second`, {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
