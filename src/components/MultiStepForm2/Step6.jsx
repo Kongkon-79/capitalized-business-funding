@@ -18,7 +18,7 @@ const Step6 = ({ handlePreviousStep, handleNextStep }) => {
                         <input
                             type="radio"
                             value="Secure Bank Validation"
-                            {...register("bank", { required: "Secure Bank Validation is Required" })}
+                            {...register("secureBank", { required: "Secure Bank Validation is Required" })}
                             className="w-5 h-5 accent-primary mb-1 text-lg font-semibold leading-[26px] text-secondary mt-2"
                         />
                         Secure Bank Validation
@@ -29,14 +29,14 @@ const Step6 = ({ handlePreviousStep, handleNextStep }) => {
                         <input
                             type="radio"
                             value="Secure Bank Statement Upload"
-                            {...register("bank", { required: "Secure Bank Statement Upload is Required" })}
+                            {...register("secureBank", { required: "Secure Bank Statement Upload is Required" })}
                             className="w-5 h-5 accent-primary mb-1 text-lg font-semibold leading-[26px] text-secondary mt-2"
                         />
                         Secure Bank Statement Upload
                     </label>
                 </div>
-                {errors?.bank && (
-                    <p className='text-sm text-red-500 text-center'>{errors.bank.message}</p>
+                {errors?.secureBank && (
+                    <p className='text-sm text-red-500 text-center'>{errors.secureBank.message}</p>
                 )}
             </div>
             <div className='flex items-center justify-center mt-8 md:mt-10'>
