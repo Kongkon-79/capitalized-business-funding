@@ -4,7 +4,6 @@ import Error from "../pages/Error";
 import MultiStepFormAllComponents2 from "../components/MultiStepForm2";
 import MultiStepFormAllComponents from "../components/MultiStepForm";
 import Message from "../components/Message/Message";
-import DataFetch from "../components/DataFetch/DataFetch";
 
 const router = createBrowserRouter([
     {
@@ -22,10 +21,6 @@ const router = createBrowserRouter([
             {
                 path : "/message",
                 element : <Message/>
-            },
-            {
-                path : "/demo-data-fetch",
-                element : <DataFetch/>
             },
             {
                 path : "*",
