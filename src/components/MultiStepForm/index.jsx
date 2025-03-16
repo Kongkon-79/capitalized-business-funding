@@ -23,10 +23,11 @@ const MultiStepFormAllComponents = () => {
   const { trigger } = methods;
   const [currentStep, setCurrentStep] = useState(1);
 
+
   const { mutate, isPending } = useMutation({
     mutationKey: ["form-data"],
     mutationFn: () =>
-      fetch(`http://localhost:5000/api/v1/first`, {
+      fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/first`, {
         method: "POST",
         body: JSON.stringify(methods.getValues()),
         headers: {
