@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { FaArrowLeftLong } from "react-icons/fa6";
 
-const Step7 = ({ handlePreviousStep, handleNextStep }) => {
+const Step7 = ({ handlePreviousStep, isPending }) => {
     const { register, formState: { errors } } = useFormContext();
     const [isOpen, setIsOpen] = useState(false);
     const handleYes = () => {
@@ -154,7 +154,7 @@ const Step7 = ({ handlePreviousStep, handleNextStep }) => {
                 {/* button  */}
                 <div className='flex items-center justify-between pt-[40px]'>
                     <button type='button' onClick={handlePreviousStep} className='flex items-center gap-[8px] text-base font-normal leading-[20px] text-primary py-[14px] pl-[14px] pr-[19px] bg-white border border-primary rounded-[4px]'> <FaArrowLeftLong /> Back </button>
-                    <button type='submit' className='text-base font-normal leading-[20px] text-white py-[14px] px-[40px] bg-primary rounded-[8px]'>Proceed</button>
+                    <button disabled={isPending} type='submit' className='text-base font-normal leading-[20px] text-white py-[14px] px-[40px] bg-primary rounded-[8px]'>{isPending ? "Processing..." : "Proceed"}</button>
                 </div>
             </div>
         </div>
